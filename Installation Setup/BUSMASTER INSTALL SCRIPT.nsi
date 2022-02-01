@@ -403,7 +403,6 @@ Section "BUSMASTER"
   Delete "$INSTDIR\SignalDefiner.dll"
   ;RMDir /r "$INSTDIR\ConverterPlugins"
   Delete "$INSTDIR\BUSMASTER.chm"
-  Delete "$INSTDIR\LDFEditor.chm"
   Delete "$INSTDIR\COPYING.LESSER.txt"
   Delete "$INSTDIR\COPYING.txt"
   Delete "$INSTDIR\FTL.txt"
@@ -580,10 +579,7 @@ Section "BUSMASTER"
   ; Help
   ;File /oname=BUSMASTER.chm "..\Documents\4 Help\out\help.chm"
   File ..\Sources\BUSMASTER\BIN\Release\BUSMASTER.chm
-  
-  ; LDF Editor Help
-  File /oname=LDFEditor.chm "..\Documents\4 Help\out\ldfeditor.chm"
-  
+    
   ; Oxygen icons resource Dll
   File ..\Sources\BUSMASTER\BIN\Release\AdvancedUIPlugIn.dll
 
@@ -630,10 +626,10 @@ Section "BUSMASTER"
   File ..\Sources\BUSMASTER\Application\SimulatedSystems\include\BMLINDefines.h
   
   ; Simulated Systems Library files
-  SetOutPath "$INSTDIR\SimulatedSystems\OBJ\"
-  File ..\Sources\BUSMASTER\Application\SimulatedSystems\OBJ\libWrapper_CAN.a
-  File ..\Sources\BUSMASTER\Application\SimulatedSystems\OBJ\libWrapper_LIN.a
-  File ..\Sources\BUSMASTER\Application\SimulatedSystems\OBJ\libWrapper_J1939.a
+  ;SetOutPath "$INSTDIR\SimulatedSystems\OBJ\"
+  ;File ..\Sources\BUSMASTER\Application\SimulatedSystems\OBJ\libWrapper_CAN.a
+  ;File ..\Sources\BUSMASTER\Application\SimulatedSystems\OBJ\libWrapper_LIN.a
+  ;File ..\Sources\BUSMASTER\Application\SimulatedSystems\OBJ\libWrapper_J1939.a
 
   ; GCC Make Files
   SetOutPath $INSTDIR
@@ -646,9 +642,9 @@ Section "BUSMASTER"
 
 ;Install:
   ; Install Visual Studio 2013 Redistributable
-  File "..\Tools\VC++ 2013 Redistributable\vcredist_x86.exe"
-  ExecWait '"vcredist_x86.exe" /s /v" /qn"'
-  Delete "$INSTDIR\vcredist_x86.exe"
+  ;File "..\Tools\VC++ 2013 Redistributable\vcredist_x86.exe"
+  ;ExecWait '"vcredist_x86.exe" /s /v" /qn"'
+  ;Delete "$INSTDIR\vcredist_x86.exe"
 
 ;NoInstall:
 

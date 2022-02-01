@@ -819,14 +819,14 @@ void CElementSelection::vAddToElementList( CString omStrMsgName,
         // Auto assignment of Color
         int nCount = m_odElementList.GetSize();
         // Assign next color index to this element
-        odNewElement.m_nLineColor =
-            g_dColorTable[ nCount % defMAX_ELEMENTS_COUNT ];
+		odNewElement.m_nLineColor =
+			g_dColorTable[nCount % (sizeof(g_dColorTable) / sizeof(g_dColorTable[0]))];
         // Assign symbol to the next index
-        odNewElement.m_nPointType = nCount + 1;
-        if( odNewElement.m_nPointType > defAVAILABLE_POINT_TYPES )
+		odNewElement.m_nPointType = 0;// nCount + 1;
+        /*if( odNewElement.m_nPointType > defAVAILABLE_POINT_TYPES )
         {
             odNewElement.m_nPointType -= defAVAILABLE_POINT_TYPES;
-        }
+        }*/
         // Assign symbol Color
         int nReverseIndex = defMAX_ELEMENTS_COUNT - nCount - 1;
         if( nReverseIndex < 0 )
@@ -888,14 +888,14 @@ void CElementSelection::vAddStatToElementList( CString omStatParamName,
             // Auto assignment of Color
             int nCount = m_odElementList.GetSize();
             // Assign next color index to this element
-            odNewElement.m_nLineColor =
-                g_dColorTable[ nCount % defMAX_ELEMENTS_COUNT ];
+			odNewElement.m_nLineColor =
+				g_dColorTable[nCount % (sizeof(g_dColorTable) / sizeof(g_dColorTable[0]))];
             // Assign symbol to the next index
-            odNewElement.m_nPointType = nCount + 1;
-            if( odNewElement.m_nPointType > defAVAILABLE_POINT_TYPES )
+			odNewElement.m_nPointType = 0;// nCount + 1;
+            /*if( odNewElement.m_nPointType > defAVAILABLE_POINT_TYPES )
             {
                 odNewElement.m_nPointType -= defAVAILABLE_POINT_TYPES;
-            }
+            }*/
             // Assign symbol Color
             int nReverseIndex = defMAX_ELEMENTS_COUNT - nCount - 1;
             if( nReverseIndex < 0 )

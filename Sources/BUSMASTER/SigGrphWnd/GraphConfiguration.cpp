@@ -73,7 +73,7 @@ void CGraphConfiguration::DoDataExchange(CDataExchange* pDX)
     DDX_Text(pDX, IDC_EDIT_DISPLAY_UPDATE, m_nUpdateRate);
     DDV_MinMaxInt(pDX, m_nUpdateRate, 1000, 20000);
     DDX_Text(pDX, IDC_EDIT_BUFFER_SIZE, m_nBufferSize);
-    DDV_MinMaxInt(pDX, m_nBufferSize, 1000, 10000);
+    DDV_MinMaxInt(pDX, m_nBufferSize, 1000, 500000);
     DDX_CBIndex(pDX, IDC_COMBO_FRAME, m_omFrameType);
     //}}AFX_DATA_MAP
     DDX_CBIndex(pDX, IDC_COMBO_LINE_DISPLAY, m_nLineDisplay);

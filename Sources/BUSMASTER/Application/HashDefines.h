@@ -1395,8 +1395,8 @@ transmission is ON.\nDo you want to ignore the changes ?"
 #define defSTR_DISABLE            "Disable"
 #define defSTR_ELEMENT_NOT_FOUND    "Element not found in the list. Please remove dead elements!!"
 
-#define defMAX_ELEMENTS_COUNT       10
-#define defSTR_MAX_ELEMENTS_EXCEEDED_MSG    "Only 10 graph elements are supported. Please delete existing element to add new element"
+#define defMAX_ELEMENTS_COUNT       30
+#define defSTR_MAX_ELEMENTS_EXCEEDED_MSG    "Only 30 graph elements are supported. Please delete existing element to add new element"
 
 #define defSTR_INVALID_RANGE        "Please enter valid range value"
 
@@ -1439,7 +1439,7 @@ transmission is ON.\nDo you want to ignore the changes ?"
 
 
 // Default values
-#define defDEFAULT_BUFFER_SIZE      5000   // 5000 Entries
+#define defDEFAULT_BUFFER_SIZE      500000  // 500000 Entries
 #define defDEFAULT_UPDATE_RATE      1000    // One Second
 
 #define defDEFAULT_FRAME_COLOR      ( RGB( 0, 85, 0 ) )
